@@ -1,5 +1,6 @@
 # Logs
 logs
+log
 *.log
 npm-debug.log*
 
@@ -21,8 +22,26 @@ coverage
 .lock-wscript
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
-build/Release
+build
+release
 
 # Dependency directory
 # https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
 node_modules
+jspm_packages
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# ignore temporary files and log files
+temp/
+tmp/
+*.tmp
+
+# IDE files
+.idea/
+.DS_Store
+.vscode
