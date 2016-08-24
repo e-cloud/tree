@@ -21,11 +21,7 @@ continuation_indent_size = 2
 [*.html]
 # indent_size = 4
 
-[*{.yml,.yaml}]
-indent_style = space
-indent_size = 2
-
-[{.travis.yml,bower.json,package.json}]
+[*{.yml,.yaml,.json,.eslintrc}]
 indent_style = space
 indent_size = 2
 
