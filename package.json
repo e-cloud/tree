@@ -34,10 +34,12 @@
     "karma-mocha-reporter": "^2.1.0",
     "karma-notify-reporter": "^1.0.1",
     "karma-sinon": "^1.0.5",
+    "karma-webpack": "^1.7.0",
     "mocha": "^3.0.0",
     "sinon": "^1.17.5",
     "standard-version": "^2.4.0",
-    "validate-commit-msg": "^2.6.1"
+    "validate-commit-msg": "^2.6.1",
+    "webpack": "^1.13.1"
   },
   "scripts": {
     "lint": "eslint src/**/*",
