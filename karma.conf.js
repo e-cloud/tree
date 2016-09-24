@@ -1,7 +1,13 @@
 // Karma configuration
-const webpackKarmaConfig = require('./webpack.karma.config');
+const webpackKarmaConfig = require('./webpack.karma.config')
+const os = require('os')
 
-module.exports = function (config) {
+module.exports = function karmaConf(config) {
+    const browserList = ['Chrome', 'Firefox']
+
+    // if is windows platform, add IE to test list
+    if (/^win/.test(os.platform())) browserList.push('IE')
+
     config.set({
 
         // base path that will be used to resolve all patterns (eg. files,
@@ -74,7 +80,7 @@ module.exports = function (config) {
         // start these browsers
         // available browser launchers:
         // https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ['Chrome', 'Firefox', 'IE'],
+        browsers: browserList,
 
 
         // Continuous Integration mode
