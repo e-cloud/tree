@@ -15,6 +15,13 @@ module.exports = {
     devtool: 'inline-source-map',
     recordsPath: path.resolve(__dirname, '.tmp/webpack-records.json'),
     module: {
+        preLoaders: [
+            {
+                test: /\.js$/,
+                exclude: [/node_modules/, /test/],
+                loader: 'isparta'
+            }
+        ],
         loaders: [
             {
                 test: /\.js$/,

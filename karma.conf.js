@@ -22,7 +22,7 @@ module.exports = function karmaConf(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'test/test_index.js'
+            'test/testEntry.js'
         ],
 
 
@@ -34,7 +34,7 @@ module.exports = function karmaConf(config) {
         // available preprocessors:
         // https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            'src/**/*.js': ['coverage', 'webpack'],
+            'src/**/*.js': ['webpack'],
             'test/**/*.js': ['webpack']
         },
 
@@ -53,8 +53,12 @@ module.exports = function karmaConf(config) {
 
 
         coverageReporter: {
-            type: 'html',
-            dir: 'coverage'
+            dir: 'coverage',
+            reporters: [
+                { type: 'lcov' },
+                { type: 'text-summary' },
+                { type: 'text-summary', file: 'text-summary.txt' }
+            ]
         },
 
 
