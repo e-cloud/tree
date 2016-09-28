@@ -1,7 +1,7 @@
 import $ from 'jquery'
-import {expect} from 'chai'
+import { expect } from 'chai'
 import treeModule from '../../../src/TreeModule'
-import Tree, {registry as treeRegistry} from '../../../src/core/tree'
+import Tree, { registry as treeRegistry } from '../../../src/core/tree'
 
 describe('Tests for core Tree', function () {
     before('', function () {
@@ -54,14 +54,12 @@ describe('Tests for core Tree', function () {
             expect(treeInstance.testId).to.be.equal(testId)
         })
 
-        it('should throw error when updating constructor via direct assignment', function() {
-            function test(){
+        it('should throw error when updating constructor via direct assignment', function () {
+            function test() {
                 treeRegistry.constructor = Tree
             }
 
             expect(test).to.throw(Error)
         })
     })
-
-
 })

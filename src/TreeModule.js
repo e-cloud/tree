@@ -1,8 +1,8 @@
-import {extend} from './util'
+import { extend } from './util'
 import defaultSetting from './core/setting'
-import {registry as TreeRegistry} from './core/tree'
+import { registry as TreeRegistry } from './core/tree'
 
-const treeCache = {};
+const treeCache = {}
 
 export default {
     /**
@@ -20,7 +20,7 @@ export default {
     },
 
     destroy(treeId) {
-        treeCache[treeId] && treeCache[treeId].destroy()
+        if (treeCache[treeId]) treeCache[treeId].destroy()
     },
 
     getTreeInstance(treeId) {

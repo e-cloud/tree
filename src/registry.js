@@ -9,10 +9,10 @@ class ClassRegistry {
         this.update = registerConstructor
 
         Object.defineProperty(this, 'constructor', {
-            get: function () {
+            get() {
                 return overridableConstructor
             },
-            set: function (val) {
+            set() {
                 throw Error(`Directly updating ${overridableConstructor.name}'s constructor is not allowed!`)
             }
         })

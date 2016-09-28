@@ -6,7 +6,7 @@ const defaultSetting = {
         addDiyDom: null,
         autoCancelSelected: true,
         dblClickExpand: true,
-        expandSpeed: "fast",
+        expandSpeed: 'fast',
         fontCss: {},
         nameIsHTML: false,
         selectedMulti: true,
@@ -17,16 +17,16 @@ const defaultSetting = {
     },
     data: {
         key: {
-            children: "children",
-            name: "name",
-            title: "",
-            url: "url",
-            icon: "icon"
+            children: 'children',
+            name: 'name',
+            title: '',
+            url: 'url',
+            icon: 'icon'
         },
         simpleData: {
             enable: false,
-            idKey: "id",
-            pIdKey: "pId",
+            idKey: 'id',
+            pIdKey: 'pId',
             rootPId: null
         },
         keep: {
@@ -36,10 +36,10 @@ const defaultSetting = {
     },
     async: {
         enable: false,
-        contentType: "application/x-www-form-urlencoded",
-        type: "post",
-        dataType: "text",
-        url: "",
+        contentType: 'application/x-www-form-urlencoded',
+        type: 'post',
+        dataType: 'text',
+        url: '',
         autoParam: [],
         otherParam: [],
         dataFilter: null,
@@ -68,6 +68,6 @@ const defaultSetting = {
         onCollapse: null,
         onRemove: null
     }
-};
+}
 
-export default defaultSetting;
+export default defaultSetting
