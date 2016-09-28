@@ -1,6 +1,6 @@
+import * as _ from 'lodash'
 import * as util from '../../util'
 import defaultSetting from '../setting'
-import _ from 'lodash'
 
 function checkData(data) {
     if (!(
@@ -22,67 +22,44 @@ class Tree {
     constructor(id, userSetting = {}, dataNodes, skipDataClone = false) {
         checkData(dataNodes)
 
-        this.setting = util.extend(defaultSetting, util.cloneDeep(userSetting));
+        this.setting = util.extend(defaultSetting, util.cloneDeep(userSetting))
 
         this.id = id
     }
 
-
-    transformData(dataNodes, skipClone) {
-        dataNodes = dataNodes ? (skipClone ? util.cloneDeep(dataNodes) : dataNodes) : []
-
-        // ensure the data is tree-like structure
-        const treeData = this.setting.data.simpleData.enable ?
-          util.transformToTreeFormat(dataNodes, this.setting.data.key) : dataNodes
-
-        util.traverseTreePostOrder(treeData, this.transformNode.bind(this))
-
-        return treeData
-    }
-
-    transformNode(rawNode) {
-
-    }
-
-    transformNodes() {}
-
     initRoot() {}
 
-    bindEvents() {}
-
-    unbindEvents() {}
-
-    bindTree() {}
-
-    unbindTree() {}
-
     addNodes() {}
+
+    insertNode() {}
 
     createNodes() {}
 
     getRoot() {}
 
-    getNodes() {}
+    getPathToRoot() {}
 
-    getSetting() {}
+    getChild(parent, index) {}
+
+    getChildCount(parent) {}
+
+    getNodes() {}
 
     getTreeId() {}
 
-    getNodeIndex() {}
+    getNodeIndex(parent, child) {}
 
-    removeNode() {}
+    removeChild(node) {}
 
-    canAsync() {}
+    isLeaf(node) {
 
-    asyncNode() {}
+    }
 
-    reAsyncNode() {}
+    reload() {}
 
     destroy() {}
 
-    apply() {}
-
-    updateNode() {}
+    updateNode(node) {}
 }
 
 export default Tree
